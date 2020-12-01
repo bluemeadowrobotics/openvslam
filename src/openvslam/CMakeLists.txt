@@ -7,6 +7,8 @@ set(spdlog_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/3rd/spdlog/include)
 set(json_INCLUDE_DIR ${PROJECT_SOURCE_DIR}/3rd/json/include)
 
 # g2o
+include_directories("/usr/local/include/g2o/EXTERNAL/")
+include_directories("/usr/local/include/g2o/EXTERNAL/csparse")
 find_package(g2o REQUIRED
              COMPONENTS
              g2o::core

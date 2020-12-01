@@ -4,6 +4,7 @@
 #include <sstream>
 #include <iomanip>
 #include <cassert>
+#include <iostream>
 
 kitti_sequence::kitti_sequence(const std::string& seq_dir_path) {
     // load timestamps
@@ -38,6 +39,7 @@ kitti_sequence::kitti_sequence(const std::string& seq_dir_path) {
     for (unsigned int i = 0; i < timestamps_.size(); ++i) {
         std::stringstream ss;
         ss << std::setfill('0') << std::setw(6) << i;
+        std::cout << ss.str() << std::endl;
         left_img_file_paths_.push_back(left_img_dir_path + ss.str() + ".png");
         right_img_file_paths_.push_back(right_img_dir_path + ss.str() + ".png");
     }
